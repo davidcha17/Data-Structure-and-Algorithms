@@ -12,3 +12,6 @@
 
 <p><strong>Big O Notation:</strong> A theoretical measurement of time and space complexity of a your algorithm/data structure. It is a 
 conveinient way to describe how fast a program is growing. </p>
+
+<p><strong>Big O</strong> is the language metric we use to describe the efficiency of a algorithm/data structure.</p>
+
