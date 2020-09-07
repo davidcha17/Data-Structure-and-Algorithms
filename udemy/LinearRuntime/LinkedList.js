@@ -194,9 +194,10 @@ class LinkedList {
 }
 
 let list = new LinkedList()
-
 list.push("hello")
 list.push("bye")
 list.push("tree")
 list.push("love")
 list.push("grind")
+
+console.log(list, "variable: list", "nodeClass: Node")

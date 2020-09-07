@@ -6,34 +6,96 @@
   <title>First Class Functions</title>
   <script src="LinkedList.js"></script>
   <script src="DoublyLinkedList.js"></script>
+  <script src="Queue.js"></script>
+  <script src="Stack.js"></script>
 </head>
 <body>
-  <h1>LinkedList</h1>
-  <ul>
-      <li>Singly Linked List are an excellent alternative to arrays when insertion and deletion at the beginning 
-          are frequently required.
-      </li>
-      <li>
-          Arrays contain a built-in index whereas Linked Lists do not.
-      </li>
-      <li>
-        The idea of a list data structure that consists of nodes is the foundation for other data structures like 
-        stacks and queues.
-      </li>
-  </ul>
-  <hr />
 
-  <h1>Dounbly Linked List</h1>
-  <ul>
-      <li>
-          Doubly Linked List are almost idential to Singly Linked List except there is an additional pointer to the previous nodes.
-      </li>
-      <li>
-          Better than Singly Linked List for finding nodes and can be done in half the time.
-      </li>
-      <li>
-          However they do take up more memory because of the extra pointer associated in a Doubly Linked List.
-      </li>
-  </ul>
+    <h2>Linear Data Structures</h2>
+
+    <h1>LinkedList</h1>
+        <p>A data structure that holds a head, tails, and length property. They consist of nodes, and each nodeshas a value and a pointer to another node or null.</p>
+        <ul>
+            <li>Singly Linked List are an excellent alternative to arrays when insertion and deletion at the beginning are frequently required.</li>
+            <li>Arrays contain a built-in index whereas Linked Lists do not.</li>
+            <li>The idea of a list data structure that consists of nodes is the foundation for other data structures like stacks and queues.</li>
+                <ul>
+                    <h4>Big O Scale: </h4>
+                        <li><b>insertion:</b> O(1)</li>
+                        <li><b>Removal:</b> O(1) or O(N)</li>
+                        <li><b>searching:</b> O(N)</li>
+                        <li><b>Access:</b> O(N)</li>
+                </ul>
+        </ul>
+    <hr />
+
+    <h1>Dounbly Linked List</h1>
+        <p>Very similar to a singly linked list and it contains two points a previous and a next.</p>
+        <ul>
+            <li>Doubly Linked List are almost idential to Singly Linked List except there is an additional pointer to the previous nodes.</li>
+            <li>Better than Singly Linked List for finding nodes and can be done in half the time.</li>
+            <li>However they do take up more memory because of the extra pointer associated in a Doubly Linked List.</li>
+                <ul>
+                    <h4>Big O Scale: </h4> 
+                    <li><b>insertion:</b> O(1)</li>
+                    <li><b>Removal:</b> O(1)</li>
+                    <li><b>searching:</b> O(N) or O(N/2) <-- still O(N)</li>
+                    <li><b>Access:</b> O(N)</li>
+                </ul>
+        </ul>
+    <hr />
+
+    <h1>Stacks</h1>
+        <p>They're data colloection and abide to the LIFO: Last In First Out Every stack has a size that determines how 
+        many nodes it can accomodate. Basically storing data in such a way where the first thing added is the last thing removed</p>
+        <p>There is more than one way to implement a stack.</p>
+        <p>For an array, it's very easy. Pushing the nodes inside then shifting them.</p>
+        <p>Building them as a class is a similar structure to Linked List in terms of push, pop, shift, and unshift</p>
+        <ul>
+                <p>Examples of using FIFO</p>
+            <li>Managing functions invocations.</li>
+            <li>Undo/Redo</li>
+            <li>Routing (the history object) is treated like a stack</li>
+                <ul>
+                    <p>Stack data structure has three main methods: </p>
+                    <li><b>push():</b> adds a node to the top of the stack</li>
+                    <li><b>pop():</b> removes a node from the top of the stack</li>
+                    <li><b>peek():</b> returns the value of the top node without removing it from the stack</li>
+                </ul>
+                <ul>
+                        <h4>Big O Scale: </h4> 
+                        <li><b>insertion:</b> O(1)</li>
+                        <li><b>Removal:</b> O(1)</li>
+                        <li><b>searching:</b> O(N)</li>
+                        <li><b>Access:</b> O(N)</li>
+                </ul>
+        </ul>
+        <hr />
+
+    <h1>Queue</h1>
+        <p>They're data collection and abide to the FIFO: First In First Out structure. Very similar to a stack and there is also 
+        many different ways to implement them. (Class or arrays) </p>
+        <p>For an array, were unshifting the items and then pop them.</p>
+        <p>Building them as a class is a similar structure to Linked List in terms of push, pop, shift, and unshift</p>
+        <ul>
+            <p>Examples of using FIFO in programming</p>
+            <li>Waiting in line for shoes</li>
+            <li>For background tasks</li>
+            <li>Printing/Task processing</li>
+                <ul>
+                    <p>Queues provide three methods for interaction: </p>
+                    <li><b>Enqueue:</b> adds data to the “back” or end of the queue</li>
+                    <li><b>Dequeue:</b> provides and removes data from the “front” or beginning of the queue</li>
+                    <li><b>Peek:</b> reveals data from the “front” of the queue without removing it</li>
+                </ul>
+                <ul>
+                        <h4>Big O Scale: </h4> 
+                        <li><b>insertion:</b> O(1)</li>
+                        <li><b>Removal:</b> O(1)</li>
+                        <li><b>searching:</b> O(N)</li>
+                        <li><b>Access:</b> O(N)</li>
+                </ul>
+        </ul>
+
 </body>
 </html>

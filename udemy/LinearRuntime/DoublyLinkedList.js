@@ -229,9 +229,10 @@ class DoublyLinkedList {
 }
 
 let doubleList = new DoublyLinkedList()
-
 doubleList.push("grind")
 doubleList.push("doesnt")
 doubleList.push("stop")
 doubleList.push("keep going")
 doubleList.push("!!!")
+
+console.log(doubleList, "variable: doubleList", "nodeClass: NodeForDouble")
