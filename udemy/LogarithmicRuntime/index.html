@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <script src="BinaryTree.js"></script>
+    <title>Search Trees</title>
+</head>
+<body>
+
+    <h2>Search Trees</h2>
+        <p>A data structure that consists of nodes in a parent/child relationship</p>
+        <p>Trees are not linear whereas Lists are linear</p>
+        <ol>
+            <li>Nodes can only point to a child.</li>
+            <li>One true parent (root).</li>
+            <li>Think of react and the sibling, child, and parent relationship.</li>
+        </ol>
+            <p>Example uses for trees: </p>
+                <ul>
+                    <li>HTML DOM</li>
+                    <li>Network routing</li>
+                    <li>Abstract Syntax tree</li>
+                    <li>Artificial intelligence</li>
+                    <li>Folders in operating systems</li>
+                    <li>Computer files systems</li>
+                </ul>
+    <hr />
+
+
+    <h2>Binary Search Tree</h2>
+        <p>They are a node-based binary tree data structure which has the following properties: </p>
+        <ul>
+            <li>Every parent node has at most two children</li>
+            <li>Every node to the left of the parent node is <strong>always less</strong> than the parent.</li>
+            <li>Every node to the right of the parent node is <strong>always greater</strong> than the parent.</li>
+
+            <ul>
+                <h4>Big O Scale: </h4>
+                <li><b>Insertion: </b>O(log(N))</li>
+                <li><b>Searching: </b>O(log(N))</li>
+                <li><strong>NOTE: </strong>it is <b>NOT</b> guaranteed! It is like that because if there is a case where the binary search tree leans one way
+                lets say the right side, then it'll keep searching every node on the left or insert until the end of the list. (Iterating through all of the nodes O(N))</li>
+            </ul>
+        </ul>
+    <hr />
+
+    <h2>Tree Traversal</h2>
+        <p>This type of tree is unsorted and the goal is to look for specific nodes, but how?</p>
+        <p><strong>Note:</strong>Going through four ways, but they are a lot more.</p>
+        <p>This requires recursions.</p>
+        <p>There are two types of tree traversal: </p>
+            <ul>
+                <li><b>Breadth-First-Search</b></li>
+                <li><b>Depth-First-Search</b></li>
+                <ul>
+                    <li>In-Order</li>
+                    <li>Pre-Order</li>
+                    <li>Post-Order</li>
+                </ul>
+            </ul>
+        <p><strong>Note: </strong>Just for visiting each node once</p>
+        <p>For Breadth-First-Search it starts from the root and then checks the child nodes from left to right and repeats until there is no more nodes.</p>
+        <p>For In-Order it starts at the very left child node and checks their parent node and then the right child node and repeat until it
+        reaches the root. It will still check the most left node from the right side of the tree.</p>
+        <p>For Pre-Order it starts from the root and starts checking all the left nodes and then the right. Once there arent any more nodes on
+        the left side the root, it will start looking at all the left nodes on the right nodes and then the right.</p>
+        <p>For Post-Order it will start from the left most node then it's sibling node and will keep checking until the last left node right
+        before the root and will start checking the right most node and continue on the same pattern until it hits the root.</p>
+        
+
+</body>
+</html>
