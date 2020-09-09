@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <script src="BinaryTree.js"></script>
+    <script src="Heaps.js"></script>
     <title>Search Trees</title>
 </head>
 <body>
@@ -60,14 +61,59 @@
                     <li>Post-Order</li>
                 </ul>
             </ul>
-        <p><strong>Note: </strong>Just for visiting each node once</p>
-        <p>For Breadth-First-Search it starts from the root and then checks the child nodes from left to right and repeats until there is no more nodes.</p>
-        <p>For In-Order it starts at the very left child node and checks their parent node and then the right child node and repeat until it
-        reaches the root. It will still check the most left node from the right side of the tree.</p>
-        <p>For Pre-Order it starts from the root and starts checking all the left nodes and then the right. Once there arent any more nodes on
-        the left side the root, it will start looking at all the left nodes on the right nodes and then the right.</p>
-        <p>For Post-Order it will start from the left most node then it's sibling node and will keep checking until the last left node right
+        <p><strong>Note: </strong>Just for visiting each node once and they all take the same amount of time!</p>
+        <p>The goal is to see which method would take the least amount of space given a situation.</p>
+        <p><b>For Breadth-First-Search</b> it starts from the root and then checks the child nodes from left to right, then it will go a level down and repeats until there is no more nodes.</p>
+        <p><b>For In-Order</b> it starts at the very left child node and checks their parent node and then the right child node and repeat until it
+        reaches the root. It will still check the most left node from the right side of the tree. Will order the list.</p>
+        <p><b>For Pre-Order</b> it starts from the root and starts checking all the left nodes and then the right. Once there arent any more nodes on
+        the left side of the root, it will start looking at all the left nodes on the right nodes and then the right.</p>
+        <p><b>For Post-Order</b> it will start from the left most node then it's sibling node and will keep checking until the last left node right
         before the root and will start checking the right most node and continue on the same pattern until it hits the root.</p>
+        <hr />
+
+    <h2>Heaps</h2>
+
+        <p>There are many types of heaps and they're part of the tree structure.</p>
+        <p>Types of Heaps: </p>
+            <ul>
+                <li>Binary Heaps</li>
+                <li>Fibonacci Heaps</li>
+                <li>Weak Heaps</li>
+                <li>Binomial Heaps</li>
+            </ul>
+    <hr />
+
+    <h2>Binary Heaps</h2>
+            <p>Very similar to a Binary Search Tree, but with some different rules.</p>
+            <p>There are two types in a Binary Heap: </p>
+                <ul>
+                    <li><strong>Max Binary Heap:</strong> parent nodes are always greater than the child nodes. (2 child nodes)</li>
+                        <ol>
+                            <li>The parent is greater than the child nodes, but there is no guarantees between the sibling nodes.(no implied ordering between siblings)</li>
+                            <li>It tries to take up the least amount of space possible; all children nodes are full as they can be.</li>
+                            <li>Left children are always filled out first.</li>
+                        </ol>
+                    <li><strong>Min Binary Heap:</strong> parent nodes are always less than the child nodes.</li>
+                        <ol>
+                            <li>The parent is less than the child nodes, but there is no guarantees between the sibling nodes.(no implied ordering between siblings)</li>
+                            <li>It tries to take up the least amount of space possible; all children nodes are full as they can be.</li>
+                            <li>Left children are always filled out first.</li>
+                        </ol>
+                        <p><strong>Note:</strong> For any index of an array n,</p>
+                        <li>The left child is stored at <b>2n + 1</b>.</li>
+                        <li>The right child is stored at <b>2n + 2</b>.</li>
+                        <li>For any child node @ index n, it's parent is at index <b>(n - 1) / 2</b> floored.</li>
+                </ul>
+            <h5>They can be implemented with Priority Queues and graph traversal algorithms</h5>
+            <ul>
+                <h4>Big O Scale: </h4>
+                <li><strong>insertion:</strong> O(log(N))</li>
+                <li><strong>Removal:</strong> O(log(N))</li>
+                <li><strong>Search:</strong> O(N)</li>
+            </ul>
+
+            
         
 
 </body>
