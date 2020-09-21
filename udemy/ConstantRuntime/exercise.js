@@ -43,5 +43,36 @@ function sortArr(arr) {
 
 }
 
-findDuplicates(arr)
-sortArr(arr)
+// findDuplicates(arr)
+// sortArr(arr)
+
+function XOR(arr) {
+    console.log(arr)
+
+    for(let i = 0; i < arr.length; i++) {
+        let index1 = arr[i]
+        let index2 = arr[1 + 1]
+        if( ( index1 < index2 && ) || ( index1 > index2 ) ) {
+            // [ 2, 1, 2, 4]
+            // one side of the operator should return if the array isnt sorted
+            // the other side should return the duplicated index in the array
+        }
+    }
+}
+
+
+// if( ( foo && !bar ) || ( !foo && bar ) ) {
+//     ...
+//   }
+
+//   if( ( foo || bar ) && !( foo && bar ) ) {
+//     ...
+//   }
+
+//   if( foo ? !bar : bar ) {
+//     ...
+//   }
+
+// these are example of XOR (EXCLUSIVE OR) operators: a boolean operator
+//   It is successful if the expression on either side is true (like ||), 
+// but not if both sides are true (like !( x && y )).
