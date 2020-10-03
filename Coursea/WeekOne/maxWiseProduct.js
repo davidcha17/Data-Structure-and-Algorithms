@@ -14,7 +14,7 @@ rl.once('line', () => {
 function readLine (line) {
     const arr = line.toString().split(' ').map(Number);
 
-    console.log(max(arr));
+    console.log(Number)
     process.exit();
 }
 
@@ -33,6 +33,10 @@ function max(arr) {
     }
     return maxProduct
 }
+// is there a way to improve the time complextiy of max?
 
+function max2(arr) {
+    
+}
 
 module.exports = max;
