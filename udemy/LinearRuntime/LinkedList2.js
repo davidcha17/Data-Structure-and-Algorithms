@@ -101,6 +101,7 @@ class LinkedList {
         let temp = prev.next; 
         prev.next = newNode; 
         newNode.next = temp;
+        console.log(prev)
 
         this.length++
         return true;

@@ -182,6 +182,7 @@ class LinkedList {
             node.next = prev
             prev = node
             node = next
+            console.log(next, prev, node)
             // node is the head that is now at the end of the list
             // this will keep shifting the the nodes from node.next
             // [10, 15, 20, 25, 30]
