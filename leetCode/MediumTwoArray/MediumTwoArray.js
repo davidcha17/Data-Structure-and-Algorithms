@@ -59,26 +59,40 @@ let fifthTest = leetSolution([2], [])
 // let fourthTest4 = mySolution([], [1])
 // let fifthTest5 = mySolution([2], [])
 
-let properCode = function findMedianSortedArrays(nums1, nums2) {
-    let totalLength = nums1.length + nums2.length; 
+let properCode = function(nums1, nums2) {
+    let totalLen = nums1.length + nums2.length; 
     let idx1 = 0;
     let idx2 = 0;
 
     let curr;
     let last;
 
-    while(idx1 + idx2 <= totalLength / 2) {
+    while(idx1 + idx2 <= totalLen / 2) {
         if(curr !== undefined) {
             last = curr;
         }
-        let eleOne = nums1[idx2];
-        let eleTwo = nums2[idx2];
-
-    }
+        let elOne = nums1[idx2];
+        let elTwo = nums2[idx2];
+        console.log(elOne, elTwo, "element one and two")
+        if (elOne === undefined) {
+            curr = elTwo;
+            idx2++;
+          } else if (elTwo === undefined) {
+            curr = elOne;
+            idx1++;
+          } else if (elOne < elTwo) {
+            curr = elOne;
+            idx1++;
+          } else {
+            curr = elTwo;
+            idx2++;
+          }
+        }
+    return totalLen % 2 === 0 ? (last + curr) / 2 : curr;
 }
 
-// let Test1 = findMedianSortedArrays([1, 2], [3])
-// let Test2 = findMedianSortedArrays([1, 2], [3, 4])
-// let Test3 = findMedianSortedArrays([0, 0], [0, 0])
-// let Test4 = findMedianSortedArrays([], [1])
-// let Test5 = findMedianSortedArrays([2], [])
+// let Test1 = properCode([1, 2], [3])
+let Test2 = properCode([1, 2], [3, 4])
+// let Test3 = properCode([0, 0], [0, 0])
+// let Test4 = properCode([], [1])
+// let Test5 = properCode([2], [])
