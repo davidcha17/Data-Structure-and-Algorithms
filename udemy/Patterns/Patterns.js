@@ -113,15 +113,17 @@ function search(arr, val) {
     // We are creating the middle index by dividing the start 
     // and end of the array. Once we get the middle index
     // we assign the index value to the variable 
-    console.log("before condition", middle)
         if(arr[middle] < val) {
             min = middle + 1;
+            // if the element is less than the value
+            // increment the min index by 1
         } else if(arr[middle] > val) {
             max = middle - 1;
+            // else if the element is greater than the
+            // value decrement the max index by 1
         } else {
             return middle;
         }
-        console.log("after condition", middle)
     }
     return -1;
 }
